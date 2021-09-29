@@ -56,3 +56,8 @@ void ex7Bis(){
     printf("Le nombre total d'eleves dans l'ecole est : %d", totalEleves(saisirNombreClasse()));
     return ;
 }
+
+void ex8Bis(){
+
+    return;
+}
