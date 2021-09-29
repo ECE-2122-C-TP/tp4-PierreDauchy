@@ -15,10 +15,9 @@ float moyenne3Notes(int note1, int note2, int note3);
 int saisirNombreEleve();
 int saisirNombreClasse();
 int totalEleves(int nbClasses);
-
-
-
-
+int multiple7Et2(int n);
+int nombreEtagePossible(int nbb);
+float moyenne();
 
 
 #endif //TP4_FONCTIONS_H

@@ -58,6 +58,22 @@ void ex7Bis(){
 }
 
 void ex8Bis(){
+    int n = saisirEntier();
+    while (multiple7Et2(n) == 0)
+    {
+        printf ("L'entier saisi n'est pas multiple de 7 et 2 a la fois ");
+        n = saisirEntier();
+    }
+    printf("L'entier saisi est bien un multiple de 7 et 2");
+    return;
+}
 
+void ex9Bis(){
+    printf("Le nombre d'etages qu'il est possible de construire vaut : %d", nombreEtagePossible(saisirEntier()));
+    return ;
+}
+
+void ex10Bis(){
+    printf("La moyenne de ces nombres entiers vaut : %f\n", moyenne());
     return;
 }

@@ -111,3 +111,81 @@ int totalEleves(int nbClasses){
     }
     return n;
 }
+
+/*fonction qui defini si un entier est à la fois multiple de 7 et 2
+ * Paramètres :
+ * - IN : l'entier saisi
+ * - OUT : 1 si oui et 0 si non
+ */
+
+int multiple7Et2(int n){
+    int sortie = (n % 7 == 0 && n % 2 == 0) ? 1 : 0;
+    return sortie;
+}
+
+/*fonction qui permet de trouver le nombre d'étages de pyramide basé sur le modèle du td réalisable à partir d'un nobre de brique
+ * Paramètres :
+ * - IN : le nombre de briques (nbb)
+ * - OUT : nbe : le nombre d'étages possible de construire et -1 si le nombre entré n'est pas valide
+ */
+
+int nombreEtagePossible(int nbb){
+    int i = 1, nbe = 0;
+    if (nbb > 1)                      /*eviter le cas ou le nombre d'étages vaut -1*/
+    {
+        while (nbb >= i * i)          /* on utilise nbb comme etant le nombre de pierres restantes pour former un nouvel etage et il faut que ce soit superieur au nombre au carre suivant*/
+        {
+            nbb -= i * i;
+            i += 1;
+            nbe += 1;
+        }
+        nbe -= 1;
+        printf("Le nombre d'etages complets qu'il sera possible de construire est : ");
+    }
+    else if (nbb == 1)
+    {
+        nbe = 0;
+        printf("Le nombre d'etages complets qu'il sera possible de construire est : ");
+    }
+    else
+    {
+        printf("Le nombre entre n'est pas valide");
+        nbe = -1;
+    }
+    return nbe;
+}
+
+/*fonction qui permet de renvoyer la moyenne de plusieurs entiers
+ * Paramètres :
+ * - IN : les entiers saisis par l'utilisateur
+ * - OUT : la moyenne des entiers saisis
+ */
+
+float moyenne(){
+    int n = 0, tot = 0, s = 0;    /*n est l'entier a saisir, tot est le nombre d'entiers saisis, s est la variable qui permet de stopper le programme*/
+    float moy = 0;
+    printf("Pour arreter la selection entrer un nombre negatif\n");
+    while (s == 0)
+    {
+        n = saisirEntier();
+        if (n < 0)
+        {
+            if (tot >= 1)
+            {
+                s = 1;
+            }
+            else
+            {
+                tot = 1;       /*eviter les division par 0*/
+                s = 1;
+            }
+        }
+        else
+        {
+            tot +=1;
+            moy += n;
+        }
+    }
+    moy = moy / tot;
+    return moy;
+}

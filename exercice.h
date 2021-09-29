@@ -10,5 +10,8 @@ void ex3();
 void ex4();
 void ex5();
 void ex7Bis();
+void ex8Bis();
+void ex9Bis();
+void ex10Bis();
 
 #endif //TP4_EXERCICE_H

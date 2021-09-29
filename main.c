@@ -8,8 +8,10 @@ int main() {
     //ex3();
     //ex4();
     //ex5();
-    ex7Bis();
-
+    //ex7Bis();
+    //ex8Bis();
+    //ex9Bis();
+    //ex10Bis();
     return 0;
 }
 
